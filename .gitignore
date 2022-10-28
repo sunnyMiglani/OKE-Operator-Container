@@ -1,1 +1,6 @@
 # ignore .oci folder as it contains sensitive information
+./*/.oci/*
+.oci/*
+
+# Ignore swap files
+*.swp
