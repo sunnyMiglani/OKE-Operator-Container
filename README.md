@@ -12,9 +12,11 @@ Inside the container you should now have oci-cli installed and your configuratio
 
 ## TODO:
 
-- [ ] Setup `$CLUSTER_OCID` and `$REGION` environment variables to pickup kubeconfig
-- [ ] Add "get kubeconfig" logic into a startup script based on these environment variables
-- [ ] ... and more
+- [X] Setup `$CLUSTER_OCID` and `$REGION` environment variables to pickup kubeconfig
+- [X] Add "get kubeconfig" logic into a startup script based on these environment variables
+- [ ] Make the `Makefile` take args for cluster and region to make this dynamic
+- [ ] Allow the ability to move dynamic set of binaries as required
+
 
 ## Current Limitations:
 
