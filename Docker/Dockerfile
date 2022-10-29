@@ -15,7 +15,9 @@ COPY .oci/* /root/.oci/
 COPY ./generate_config.sh /root/
 RUN chmod +x /root/generate_config.sh
 
-RUN ./root/generate_config.sh
-
 ENV CLUSTER_OCID=$CLUSTER_OCID
 ENV REGION=$REGION
+
+# Finally, run the generate config step so we can do that as we start
+# CMD ["./root/generate_config.sh", ";", "/bin/bash"]
+CMD /bin/bash -c './root/generate_config.sh; /bin/bash'

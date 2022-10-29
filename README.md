@@ -6,7 +6,7 @@ This operator tool (better name tbd) is used to help extract and use a kubeconfi
 
 1. Copy / Setup a `.oci` folder in the `Docker` directory of this project (this folder is .gitignored)
 2. Run `make` to build the dockerfile
-3. Run docker exec -it localhost/operator-tool:latest 
+3. To run the container do `docker run --env REGION="region-name-here" --env CLUSTER_OCID="ocid1.cluster.ocid.here" -it localhost/operator-tool:latest` 
 
 Inside the container you should now have oci-cli installed and your configuration copied into the container, this will let you run specific OCI CLI commands
 
@@ -14,7 +14,6 @@ Inside the container you should now have oci-cli installed and your configuratio
 
 - [X] Setup `$CLUSTER_OCID` and `$REGION` environment variables to pickup kubeconfig
 - [X] Add "get kubeconfig" logic into a startup script based on these environment variables
-- [ ] Make the `Makefile` take args for cluster and region to make this dynamic
 - [ ] Allow the ability to move dynamic set of binaries as required
 
 
@@ -22,7 +21,9 @@ Inside the container you should now have oci-cli installed and your configuratio
 
 ### OCI Config file setup
 
-The OCI config file requires a path to the private key associated with the relevant user. A limitation of this tool currently is that the `path` var should be relative to `~` to ensure the generate_config script works correctly.
+The OCI config file requires a path to the private key associated with the relevant user. A limitation of this tool currently is that the `path` var should be relative to `~` to ensure the kubeconfig setup script works correctly.
+
+Without this step, OCI CLI commands will not work
 
 e.g You must have a config path that looks like:
 
