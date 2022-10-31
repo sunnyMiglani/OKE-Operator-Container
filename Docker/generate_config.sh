@@ -11,6 +11,10 @@ if [[ -z "${REGION}" ]]; then
 fi
 
 oci ce cluster create-kubeconfig --cluster-id "$CLUSTER_OCID" --file $HOME/.kube/config --region "$REGION" --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
-echo "KUBECONFIG SET!"
+if [[ $? -eq 0 ]] ; then
+    echo "KUBECONFIG successfully set!"
+else 
+    echo "Failed to set KUBECONFIG"
+fi
 
 
