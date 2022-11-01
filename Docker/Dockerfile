@@ -19,15 +19,9 @@ RUN if [[ "$BUILD_ARCH" == "arm64v8" ]] ; then curl -LO https://storage.googleap
 RUN chmod +x ./kubectl
 RUN mv ./kubectl /usr/local/bin
 
-ARG CLUSTER_OCID
-ARG REGION
-
 COPY .oci/* /root/.oci/
 COPY ./generate_config.sh /root/
 RUN chmod +x /root/generate_config.sh
-
-ENV CLUSTER_OCID=$CLUSTER_OCID
-ENV REGION=$REGION
 
 # Finally, run the generate config step so we can do that as we start
 # CMD ["./root/generate_config.sh", ";", "/bin/bash"]
