@@ -1,0 +1,6 @@
+# Ignore venv dir
+.venv
+# Ignore __pycache__
+__pycache__
+# Ignore egg info
+*.egg-info/
