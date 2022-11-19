@@ -25,4 +25,4 @@ RUN chmod +x /root/generate_config.sh
 
 # Finally, run the generate config step so we can do that as we start
 # CMD ["./root/generate_config.sh", ";", "/bin/bash"]
-CMD /bin/bash -c './root/generate_config.sh; /bin/bash'
+CMD /bin/bash -c './root/generate_config.sh;  /bin/bash'

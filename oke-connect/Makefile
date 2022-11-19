@@ -5,6 +5,9 @@ venv:
 run:
 	./python39venv/bin/python3.9 setup.py develop
 
+freeze:
+	./python39venv/bin/pip freeze | grep -v "oke-connect"  > requirements.txt
+
 clean:
 	rm -rf __pycache__
 	rm -rf python39venv
