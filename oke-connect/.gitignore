@@ -1,5 +1,6 @@
 # Ignore venv dir
 .venv
+python39venv
 # Ignore __pycache__
 __pycache__
 # Ignore egg info

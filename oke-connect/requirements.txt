@@ -10,7 +10,6 @@ importlib-metadata==5.0.0
 jaraco.classes==3.2.3
 keyring==23.11.0
 more-itertools==9.0.0
--e git+ssh://git@github.com/sunnyMiglani/OKE-Operator-Container.git@72e9b69ba366bd991f84cdc438ce19edf336b74b#egg=oke_connect&subdirectory=oke-connect
 packaging==21.3
 pkginfo==1.8.3
 Pygments==2.13.0
