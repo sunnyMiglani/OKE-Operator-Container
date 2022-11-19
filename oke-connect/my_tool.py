@@ -23,7 +23,6 @@ def hello(name):
 def container():
     setup_docker()
 
-
 # Docker section - TODO: Cleanup
 def setup_docker():
     dockerclient = DockerTalker()
