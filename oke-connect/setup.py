@@ -15,16 +15,16 @@ setup(
     long_description = long_description,
     long_description_content_type = "text/markdown",
     url = 'https://github.com/sunnyMiglani/OKE-Operator-Container',
-    py_modules = ['my_tool', 'app'],
+    py_modules = ['tool', 'app'],
     packages = find_packages(),
     install_requires = [requirements],
     python_requires='>=3.7',
     classifiers=[
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Operating System :: OS Independent",
     ],
     entry_points = '''
         [console_scripts]
-        oke-connect=my_tool:cli
+        oke-connect=tool:cli
     '''
 )

@@ -16,4 +16,11 @@ To run (build) the program, use `make run`
 
 To clean, do `make clean`
 
+## Using
+
+To use the tool (atleast to see help and test for now - WIP)
+
+Run `make run` (after make venv) and then do `oke-connect` to see help
+
+
 Source :  https://medium.com/nerd-for-tech/how-to-build-and-distribute-a-cli-tool-with-python-537ae41d9d78
