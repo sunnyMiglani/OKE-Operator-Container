@@ -34,13 +34,13 @@ def shell():
     run_shell()
 
 def run_shell():
-
+    region = "uk-london-1"
     print("Killing running oke-operator-tool container if any")
-    command.run(["podman", "kill", "oke-operator-tool"])
+    subprocess.run(["podman", "kill", "oke-operator-tool-"+region])
 
     
     print("Running oke-operator-tool container with the given cluster and region")
-    command.run(["podman","run","-d", "-t", "--name","oke-operator-tool", "--env","CLUSTER_OCID=ocid1.cluster.oc1.uk-london-1.aaaaaaaaao5d3nonea7h7krgyosec7afcstznbptf54scrmfvcomrxfpu3da", "--env", "REGION=uk-london-1", "localhost/operator-tool:latest"])
+    subprocess.run(["podman","run","-d", "-t", "--name","oke-operator-tool-"+region, "--env","CLUSTER_OCID=ocid1.cluster.oc1.uk-london-1.aaaaaaaaao5d3nonea7h7krgyosec7afcstznbptf54scrmfvcomrxfpu3da", "--env", "REGION="+region, "localhost/operator-tool:latest"])
 
     print("You can now run \"docker attach oke-operator-tool\" to attach to the running container")
 
