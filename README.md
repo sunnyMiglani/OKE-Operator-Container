@@ -2,6 +2,11 @@
 
 This operator tool (better name tbd) is used to help extract and use a kubeconfig for a particular OKE cluster in Oracle Cloud Infrastructure
 
+## oke-connect tool
+
+The oke-connect tool will help drive the creation and running of the containers
+At this point it's only supporting a hardcoded cluster-ocid, but this will be fixed
+
 ## Setup
 
 1. Copy / Setup a `.oci` folder in the `Docker` directory of this project (this folder is .gitignored)
@@ -9,12 +14,6 @@ This operator tool (better name tbd) is used to help extract and use a kubeconfi
 3. To run the container do `docker run --env REGION="region-name-here" --env CLUSTER_OCID="ocid1.cluster.ocid.here" -it localhost/operator-tool:latest` 
 
 Inside the container you should now have oci-cli installed and your configuration copied into the container, this will let you run specific OCI CLI commands
-
-## TODO:
-
-- [X] Setup `$CLUSTER_OCID` and `$REGION` environment variables to pickup kubeconfig
-- [X] Add "get kubeconfig" logic into a startup script based on these environment variables
-- [ ] Allow the ability to move dynamic set of binaries as required
 
 
 ## Current Limitations:
@@ -35,3 +34,7 @@ region=uk-london-1
 key_file=~/.oci/oci_api_key.pem # See relative path from ~
 compartment-id=ocid1.tenancy......compartment here
 ```
+
+### oke-connect only supports Podman
+
+At the moment, oke-connect hardcodes podman commands into the shell commands. 

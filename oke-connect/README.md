@@ -20,7 +20,10 @@ To clean, do `make clean`
 
 To use the tool (atleast to see help and test for now - WIP)
 
-Run `make run` (after make venv) and then do `oke-connect` to see help
+1. Run `make venv` to build the virtual env
+2. Run `source python39env/bin/activate` to use the venv
+3. Run `make run` to build the oke-connect tool
+4. Run `oke-connect` or `oke-connect shell` to use the tool with guidance
 
 
 Source :  https://medium.com/nerd-for-tech/how-to-build-and-distribute-a-cli-tool-with-python-537ae41d9d78
