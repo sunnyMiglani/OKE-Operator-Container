@@ -12,3 +12,6 @@ clean:
 	rm -rf __pycache__
 	rm -rf python39venv
 
+help:
+	echo "Run venv to make the venv, run to update oke-connect, freeze to store requirements.txt or clean to clear all temp files and devenv"
+
