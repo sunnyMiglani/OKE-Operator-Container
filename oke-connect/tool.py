@@ -16,12 +16,14 @@ def hello(name):
     click.echo(f'Hello {name}')
 
 @cli.command()
-def shell():
-    run_shell()
+@click.option('-r', '--region', type=str, help='Which region to use', required=True)
+def shell(region):
+    run_shell(region)
 
-def run_shell():
-
-    region = "uk-london-1"
+def run_shell(region):
+    if region == "":
+        print("Please enter a region")
+        return
     print(f"Killing running oke-operator-tool container for {region} if any")
     subprocess.run(["podman", "container","rm","-f", f"oke-operator-tool-{region}"])
     print("Running oke-operator-tool container with the given cluster and region")
