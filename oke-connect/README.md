@@ -27,3 +27,23 @@ To use the tool (atleast to see help and test for now - WIP)
 
 
 Source :  https://medium.com/nerd-for-tech/how-to-build-and-distribute-a-cli-tool-with-python-537ae41d9d78
+
+
+## Config File:
+
+The configuration file is a JSON file that includes mappings from the key to a region name / cluster ocid. This file is then read by the tool and will run a container on request for a certain key
+
+The data structure looks like:
+
+```
+    {
+	"production-uk-london-1": {
+		"region": "uk-london-1",
+		"cluster_ocid": "aaaaa"
+	},
+	"development-uk-london-1": {
+		"region": "uk-london-1",
+		"cluster_ocid": "bbbb"
+	}
+}
+```
