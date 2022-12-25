@@ -6,5 +6,9 @@
     "development-uk-london-1":{
         "region":"uk-london-1",
         "cluster_ocid":"ocid1.cluster.oc1.uk-london-1.aaaaaaaaeq2adklah74pa5222mek6pmr5xb4dwhiznphldq2pc43g3pnd7ta"
+    },
+    "production-eu-frankfurt-1":{
+        "region":"eu-frankfurt-1",
+        "cluster_ocid":"ocid1.cluster.oc1.eu-frankfurt-1.aaaaaaaah643pq3o2qtobf4sbqyosdxa3h2hulqitwnk32ru6cirzndpydgq"
     }
 }
