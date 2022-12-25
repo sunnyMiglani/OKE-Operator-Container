@@ -10,11 +10,11 @@ At this point it's only supporting a hardcoded cluster-ocid, but this will be fi
 ## Setup
 
 1. Copy / Setup a `.oci` folder in the `Docker` directory of this project (this folder is .gitignored)
-2. Run `make` to build the dockerfile
+2. Run `make build` to build the dockerfile for x86, run `make build-arm` for arm 
 3. To run the container do `docker run --env REGION="region-name-here" --env CLUSTER_OCID="ocid1.cluster.ocid.here" -it localhost/operator-tool:latest` 
+4. To use the oke-connect tool, follow the build instructions in the oke-connect directory
 
 Inside the container you should now have oci-cli installed and your configuration copied into the container, this will let you run specific OCI CLI commands
-
 
 ## Current Limitations:
 
